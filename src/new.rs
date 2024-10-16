@@ -34,7 +34,7 @@ int main()
     }
 
     if !no_aio {
-        message.push_str(format!("   freopen(\"{name}in.txt\", \"r\", stdin);\n   freopen(\"{name}out.txt\", \"w\", stdout);\n").as_str());
+        message.push_str(format!("    #ifndef NO_AIO\n    freopen(\"{name}in.txt\", \"r\", stdin);\n    freopen(\"{name}out.txt\", \"w\", stdout);\n    #endif\n").as_str());
     }
     message.push_str("}");
 
