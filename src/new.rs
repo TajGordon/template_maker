@@ -90,6 +90,6 @@ fn info_message() {
 }
 
 fn help_message() {
-    let message = String::from("usage: teml [filename] --[args]");
+    let message = String::from("usage: teml add [filename] --[args]\n       teml run [filename]");
     println!("{message}");
 }
