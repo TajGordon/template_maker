@@ -40,6 +40,7 @@ using namespace std;
 #define inf LONG_LONG_MAX
 signed main()
 {
+}
 ");
 
             // let mut no_aio: bool = false;
