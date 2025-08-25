@@ -34,7 +34,7 @@ pub fn run() {
                 }
             }
         } if args[1] == "new" || args[1] == "add" {
-            let mut message: String = String::from("#include <bits/stdc++.h>
+            let message: String = String::from("#include <bits/stdc++.h>
 using namespace std;
 #define int long long
 #define inf LONG_LONG_MAX
@@ -42,14 +42,14 @@ signed main()
 {
 ");
 
-            let mut no_aio: bool = false;
+            // let mut no_aio: bool = false;
             let mut name: String = String::new();
 
             for arg in args.iter().skip(2) {
                 match arg.as_str() {
                     "--help" | "-h" => help_message(),
 
-                    "--no-aio" => no_aio = true,
+                    // "--no-aio" => no_aio = true,
 
                     "add" | "new" => (),
                     /* Do nothing about invalid arguments */
@@ -60,10 +60,10 @@ signed main()
             if name == String::new() {
                 help_message();
             } else {
-                if !no_aio {
-                    message.push_str(format!("    #ifndef NO_AIO\n    freopen(\"{name}in.txt\", \"r\", stdin);\n    freopen(\"{name}out.txt\", \"w\", stdout);\n    #endif\n").as_str());
-                }
-                message.push_str("}");
+                // if !no_aio {
+                //     message.push_str(format!("    #ifndef NO_AIO\n    freopen(\"{name}in.txt\", \"r\", stdin);\n    freopen(\"{name}out.txt\", \"w\", stdout);\n    #endif\n").as_str());
+                // }
+                // message.push_str("}");
 
                 let mut file = File::create(format!("{name}.cpp")).unwrap();
                 file.write_all(message.as_bytes()).unwrap();
