@@ -35,13 +35,10 @@ pub fn run() {
             }
         } if args[1] == "new" || args[1] == "add" {
             let mut message: String = String::from("#include <bits/stdc++.h>
-#define F(I,J,K) for (int (I) = (J); (I) < (K); (I)++)
-#define FR(I,J,K) for (int (I) = (K); (I) > (J); (I)--)
-typedef long long ll;
-typedef unsigned long long ull;
-typedef long double ld;
 using namespace std;
-int main()
+#define int long long
+#define inf LONG_LONG_MAX
+signed main()
 {
 ");
 
