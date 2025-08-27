@@ -38,6 +38,7 @@ pub fn run() {
 using namespace std;
 #define int long long
 #define inf LONG_LONG_MAX
+#define pb push_back
 signed main()
 {
 }
